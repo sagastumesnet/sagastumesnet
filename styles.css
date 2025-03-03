@@ -459,19 +459,24 @@ header nav {
     font-size: 1.25rem;
 }
 
+.contact-button.call {
+    background-color: #2563eb;
+    color: white;
+    order: 1;
+}
+
 .contact-button.whatsapp {
     background-color: #25D366;
+    color: white;
+    order: 2;
 }
 
 .contact-button.email {
-    background-color: #f97316;
-    color: white;
+    background-color: transparent;
+    color: #f97316;
+    text-decoration: underline;
+    order: 3;
 }
-
-.contact-button.call {
-    background-color: #2563eb;
-}
-
 
 .contact-button:hover {
     transform: translateY(-2px);
@@ -1154,19 +1159,24 @@ header nav {
     font-size: 1.25rem;
 }
 
+.contact-button.call {
+    background-color: #2563eb;
+    color: white;
+    order: 1;
+}
+
 .contact-button.whatsapp {
     background-color: #25D366;
+    color: white;
+    order: 2;
 }
 
 .contact-button.email {
-    background-color: #f97316;
-    color: white;
+    background-color: transparent;
+    color: #f97316;
+    text-decoration: underline;
+    order: 3;
 }
-
-.contact-button.call {
-    background-color: #2563eb;
-}
-
 
 .contact-button:hover {
     transform: translateY(-2px);
@@ -1849,19 +1859,24 @@ header nav {
     font-size: 1.25rem;
 }
 
+.contact-button.call {
+    background-color: #2563eb;
+    color: white;
+    order: 1;
+}
+
 .contact-button.whatsapp {
     background-color: #25D366;
+    color: white;
+    order: 2;
 }
 
 .contact-button.email {
-    background-color: #f97316;
-    color: white;
+    background-color: transparent;
+    color: #f97316;
+    text-decoration: underline;
+    order: 3;
 }
-
-.contact-button.call {
-    background-color: #2563eb;
-}
-
 
 .contact-button:hover {
     transform: translateY(-2px);
@@ -2544,19 +2559,24 @@ header nav {
     font-size: 1.25rem;
 }
 
+.contact-button.call {
+    background-color: #2563eb;
+    color: white;
+    order: 1;
+}
+
 .contact-button.whatsapp {
     background-color: #25D366;
+    color: white;
+    order: 2;
 }
 
 .contact-button.email {
-    background-color: #f97316;
-    color: white;
+    background-color: transparent;
+    color: #f97316;
+    text-decoration: underline;
+    order: 3;
 }
-
-.contact-button.call {
-    background-color: #2563eb;
-}
-
 
 .contact-button:hover {
     transform: translateY(-2px);
@@ -3239,19 +3259,24 @@ header nav {
     font-size: 1.25rem;
 }
 
+.contact-button.call {
+    background-color: #2563eb;
+    color: white;
+    order: 1;
+}
+
 .contact-button.whatsapp {
     background-color: #25D366;
+    color: white;
+    order: 2;
 }
 
 .contact-button.email {
-    background-color: #f97316;
-    color: white;
+    background-color: transparent;
+    color: #f97316;
+    text-decoration: underline;
+    order: 3;
 }
-
-.contact-button.call {
-    background-color: #2563eb;
-}
-
 
 .contact-button:hover {
     transform: translateY(-2px);
@@ -3934,19 +3959,24 @@ header nav {
     font-size: 1.25rem;
 }
 
+.contact-button.call {
+    background-color: #2563eb;
+    color: white;
+    order: 1;
+}
+
 .contact-button.whatsapp {
     background-color: #25D366;
+    color: white;
+    order: 2;
 }
 
 .contact-button.email {
-    background-color: #f97316;
-    color: white;
+    background-color: transparent;
+    color: #f97316;
+    text-decoration: underline;
+    order: 3;
 }
-
-.contact-button.call {
-    background-color: #2563eb;
-}
-
 
 .contact-button:hover {
     transform: translateY(-2px);
@@ -4629,19 +4659,24 @@ header nav {
     font-size: 1.25rem;
 }
 
+.contact-button.call {
+    background-color: #2563eb;
+    color: white;
+    order: 1;
+}
+
 .contact-button.whatsapp {
     background-color: #25D366;
+    color: white;
+    order: 2;
 }
 
 .contact-button.email {
-    background-color: #f97316;
-    color: white;
+    background-color: transparent;
+    color: #f97316;
+    text-decoration: underline;
+    order: 3;
 }
-
-.contact-button.call {
-    background-color: #2563eb;
-}
-
 
 .contact-button:hover {
     transform: translateY(-2px);
