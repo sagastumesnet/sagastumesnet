@@ -266,6 +266,8 @@ header nav {
     transition: all 0.4s ease;
     z-index: 2;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
 }
 
 .service-card:hover .service-details {
@@ -287,17 +289,20 @@ header nav {
     margin-bottom: 1rem;
     animation: bounce 2s infinite;
     display: inline-block;
+    color: var(--primary);
 }
 
 .service-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    color: var(--primary);
 }
 
 .service-card p {
-    color: #6b7280;
+    color: #374151;
     margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .service-link {
@@ -924,6 +929,8 @@ header nav {
     transition: all 0.4s ease;
     z-index: 2;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
 }
 
 .service-card:hover .service-details {
@@ -945,17 +952,20 @@ header nav {
     margin-bottom: 1rem;
     animation: bounce 2s infinite;
     display: inline-block;
+    color: var(--primary);
 }
 
 .service-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    color: var(--primary);
 }
 
 .service-card p {
-    color: #6b7280;
+    color: #374151;
     margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .service-link {
@@ -1582,6 +1592,8 @@ header nav {
     transition: all 0.4s ease;
     z-index: 2;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
 }
 
 .service-card:hover .service-details {
@@ -1603,17 +1615,20 @@ header nav {
     margin-bottom: 1rem;
     animation: bounce 2s infinite;
     display: inline-block;
+    color: var(--primary);
 }
 
 .service-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    color: var(--primary);
 }
 
 .service-card p {
-    color: #6b7280;
+    color: #374151;
     margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .service-link {
@@ -2240,6 +2255,8 @@ header nav {
     transition: all 0.4s ease;
     z-index: 2;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
 }
 
 .service-card:hover .service-details {
@@ -2261,17 +2278,20 @@ header nav {
     margin-bottom: 1rem;
     animation: bounce 2s infinite;
     display: inline-block;
+    color: var(--primary);
 }
 
 .service-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    color: var(--primary);
 }
 
 .service-card p {
-    color: #6b7280;
+    color: #374151;
     margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .service-link {
@@ -2898,6 +2918,8 @@ header nav {
     transition: all 0.4s ease;
     z-index: 2;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
 }
 
 .service-card:hover .service-details {
@@ -2919,17 +2941,20 @@ header nav {
     margin-bottom: 1rem;
     animation: bounce 2s infinite;
     display: inline-block;
+    color: var(--primary);
 }
 
 .service-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    color: var(--primary);
 }
 
 .service-card p {
-    color: #6b7280;
+    color: #374151;
     margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .service-link {
@@ -3556,6 +3581,8 @@ header nav {
     transition: all 0.4s ease;
     z-index: 2;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
 }
 
 .service-card:hover .service-details {
@@ -3577,17 +3604,20 @@ header nav {
     margin-bottom: 1rem;
     animation: bounce 2s infinite;
     display: inline-block;
+    color: var(--primary);
 }
 
 .service-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    color: var(--primary);
 }
 
 .service-card p {
-    color: #6b7280;
+    color: #374151;
     margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .service-link {
@@ -4214,6 +4244,8 @@ header nav {
     transition: all 0.4s ease;
     z-index: 2;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
 }
 
 .service-card:hover .service-details {
@@ -4235,17 +4267,20 @@ header nav {
     margin-bottom: 1rem;
     animation: bounce 2s infinite;
     display: inline-block;
+    color: var(--primary);
 }
 
 .service-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    color: var(--primary);
 }
 
 .service-card p {
-    color: #6b7280;
+    color: #374151;
     margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .service-link {
