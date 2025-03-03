@@ -19,9 +19,9 @@ body {
 }
 
 .container {
-    max-width: 75rem;
+    width: 1200px;
     margin: 0 auto;
-    padding: 0 var(--container-padding);
+    padding: 0 20px;
 }
 
 /* Navigation */
@@ -43,9 +43,8 @@ body {
 }
 
 .nav-menu {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
+    display: block;
+    float: right;
 }
 
 .nav-menu a {
@@ -61,9 +60,8 @@ body {
 
 /* Services Grid */
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
-    gap: 2rem;
+    display: block;
+    width: 100%;
     padding: 2rem 0;
 }
 
@@ -147,10 +145,8 @@ body {
 
 /* Contact Buttons */
 .contact-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: block;
+    text-align: center;
     padding: 1rem;
 }
 
