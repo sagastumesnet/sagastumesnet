@@ -360,129 +360,20 @@
             </form>
         </div>
     </div>
+    <div class="chat-container">
+        <button class="toggle-chat" onclick="toggleChat()">💬</button>
+        <div class="chat-box" id="chatBox">
+            <p>¡Hola! ¿En qué podemos ayudarte?</p>
+            <a href="https://wa.me/50238660653?text=Hola, necesito más información." target="_blank">
+                <button>Ir a WhatsApp 💬</button>
+            </a>
+        </div>
+    </div>
 
     <script>
-        const serviceDetails = {
-            'Creación de NIT': {
-                description: 'Servicio especializado para obtener su Número de Identificación Tributaria de forma rápida y segura',
-                details: [
-                    { title: 'Trámite Express', text: 'Obtención de NIT en el menor tiempo posible' },
-                    { title: 'Asesoría Completa', text: 'Guía sobre documentos necesarios y proceso a seguir' },
-                    { title: 'Actualización de RTU', text: 'Actualización de datos en el Registro Tributario Unificado' },
-                    { title: 'Seguimiento', text: 'Monitoreo constante del estado de su trámite' }
-                ]
-            },
-            'Pago de Impuestos': {
-                description: 'Gestión profesional de sus obligaciones tributarias ante la SAT',
-                details: [
-                    { title: 'Declaraciones Mensuales', text: 'IVA, ISR y otros impuestos mensuales' },
-                    { title: 'Declaración Anual', text: 'Preparación y presentación de su declaración anual' },
-                    { title: 'Rectificaciones', text: 'Corrección de declaraciones anteriores' },
-                    { title: 'Asesoría Fiscal', text: 'Consultoría sobre obligaciones tributarias' }
-                ]
-            },
-            'Agencia Virtual SAT': {
-                description: 'Asistencia completa para sus gestiones en la plataforma virtual de la SAT',
-                details: [
-                    { title: 'Acceso y Registro', text: 'Creación y gestión de su cuenta en Agencia Virtual' },
-                    { title: 'Trámites en Línea', text: 'Gestión de solicitudes y documentos digitales' },
-                    { title: 'Consultas', text: 'Verificación de estado de cuenta y obligaciones' },
-                    { title: 'Soporte Técnico', text: 'Ayuda con problemas de la plataforma' }
-                ]
-            },
-            'Finiquito CGC': {
-                description: 'Gestión de finiquitos y trámites ante la Contraloría General de Cuentas',
-                details: [
-                    { title: 'Finiquito CGC', text: 'Obtención de finiquito de la Contraloría General de Cuentas' },
-                    { title: 'Actualización de datos', text: 'Actualización de información en el sistema de la CGC' },
-                    { title: 'Adhesión', text: 'Proceso de adhesión a la Contraloría General de Cuentas' }
-                ]
-            },
-            'Registro de Títulos': {
-                description: 'Servicio completo de registro y certificación de títulos académicos',
-                details: [
-                    { title: 'Registro de títulos', text: 'Inscripción de títulos de diversificado ante las autoridades correspondientes' },
-                    { title: 'Certificación', text: 'Obtención de certificaciones oficiales de títulos registrados' },
-                    { title: 'Validación', text: 'Verificación de autenticidad de títulos académicos' }
-                ]
-            }
-        };
-
-        function showServiceDetails(serviceName) {
-            const modal = document.getElementById('serviceDetailsModal');
-            const service = serviceDetails[serviceName];
-
-            if (service) {
-                document.getElementById('serviceTitle').textContent = serviceName;
-                document.getElementById('serviceDescription').textContent = service.description;
-
-                const detailsList = document.getElementById('serviceDetailsList');
-                detailsList.innerHTML = '';
-
-                service.details.forEach(detail => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `
-                        <span class="service-details-icon"><i class="fas fa-check-circle"></i></span>
-                        <div class="service-details-text">
-                            <h4>${detail.title}</h4>
-                            <p>${detail.text}</p>
-                        </div>
-                    `;
-                    detailsList.appendChild(li);
-                });
-
-                modal.classList.add('show');
-                modal.style.display = 'block';
-            }
-        }
-
-        function showRegistrationForm(serviceName) {
-            if (serviceName) {
-                document.getElementById('selectedService').textContent = serviceName;
-            }
-            document.getElementById('serviceDetailsModal').style.display = 'none';
-            const modal = document.getElementById('registrationModal');
-            modal.classList.add('show');
-            modal.style.display = 'block';
-        }
-
-        document.querySelectorAll('.close-modal').forEach(button => {
-            button.onclick = function() {
-                const modals = document.querySelectorAll('.modal');
-                modals.forEach(modal => {
-                    modal.classList.remove('show');
-                    setTimeout(() => {
-                        modal.style.display = 'none';
-                    }, 300);
-                });
-            }
-        });
-
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.classList.remove('show');
-                setTimeout(() => {
-                    event.target.style.display = 'none';
-                }, 300);
-            }
-        }
-
-        function handleRegistration(event) {
-            event.preventDefault();
-            const formData = new FormData(event.target);
-            const data = Object.fromEntries(formData);
-            
-            // Here you would typically send this data to your backend
-            console.log('Registration data:', data);
-            
-            // Show success message
-            alert('¡Registro exitoso! Nos pondremos en contacto con usted pronto.');
-            const modal = document.getElementById('registrationModal');
-            modal.classList.remove('show');
-            setTimeout(() => {
-                modal.style.display = 'none';
-                event.target.reset();
-            }, 300);
+        function toggleChat() {
+            var chatBox = document.getElementById("chatBox");
+            chatBox.style.display = (chatBox.style.display === "none" || chatBox.style.display === "") ? "block" : "none";
         }
     </script>
 </body>
