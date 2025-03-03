@@ -7,8 +7,51 @@ const multer = require('multer');
 const { Client } = require('@notionhq/client');
 const tesseract = require('tesseract.js');
 const PDFDocument = require('pdfkit');
+<<<<<<< HEAD
+const WebSocket = require('ws');
+const http = require('http');
 require('dotenv').config();
 
+// Create HTTP server
+const server = http.createServer(app);
+
+// Initialize WebSocket server
+const wss = new WebSocket.Server({ server });
+
+// WebSocket connection handler
+wss.on('connection', (ws) => {
+    console.log('New WebSocket connection');
+    
+    ws.on('message', (message) => {
+        // Handle incoming messages
+        console.log('Received:', message);
+        
+        // Broadcast to all connected clients
+        wss.clients.forEach((client) => {
+            if (client !== ws && client.readyState === WebSocket.OPEN) {
+                client.send(message);
+            }
+        });
+    });
+    
+    ws.on('close', () => {
+        console.log('Client disconnected');
+    });
+});
+
+// Real-time notification system
+const notifyClients = (type, data) => {
+    wss.clients.forEach((client) => {
+        if (client.readyState === WebSocket.OPEN) {
+            client.send(JSON.stringify({ type, data }));
+        }
+    });
+};
+
+=======
+require('dotenv').config();
+
+>>>>>>> 4c7bd23a480803b914367abbdfa6b801dcf51b59
 // Configure Notion client
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
@@ -157,6 +200,17 @@ app.post('/api/service-requests', auth, upload.single('dpiDocument'), async (req
         // Send notification
         await sendNotification(req.user, serviceRequest);
         
+<<<<<<< HEAD
+        // Notify all connected clients about the new service request
+        notifyClients('newServiceRequest', {
+            id: serviceRequest._id,
+            type: serviceRequest.serviceType,
+            status: serviceRequest.status,
+            createdAt: serviceRequest.createdAt
+        });
+        
+=======
+>>>>>>> 4c7bd23a480803b914367abbdfa6b801dcf51b59
         res.status(201).send(serviceRequest);
     } catch (error) {
         res.status(400).send(error);
