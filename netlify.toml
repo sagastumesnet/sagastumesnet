@@ -1,8 +1,11 @@
 [build]
-  publish = "."
-  command = "# no build command needed for static site"
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/.netlify/functions/next_render"
   status = 200

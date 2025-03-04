@@ -12,7 +12,7 @@
     "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -20,7 +20,10 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
@@ -31,8 +34,4 @@
   "exclude": [
     "node_modules"
   ]
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 4c7bd23a480803b914367abbdfa6b801dcf51b59
