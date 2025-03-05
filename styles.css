@@ -203,24 +203,21 @@ header nav {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1.5rem;
-    padding: 0 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-        padding: 0 2rem;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0;
     }
 }
 
@@ -229,18 +226,14 @@ header nav {
     overflow: hidden;
     background-color: white;
     border-radius: 0.5rem;
-    padding: 1.25rem;
+    padding: 1.5rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     transform: translateY(0);
     opacity: 1;
     animation: fadeInUp 0.6s ease forwards;
     cursor: pointer;
     text-decoration: none;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .service-card::before {
@@ -298,37 +291,12 @@ header nav {
     transform: translateY(-8px);
 }
 
-.service-card:hover .service-icon {
-    transform: scale(1.1);
-    background: rgba(var(--primary-rgb), 0.2);
-}
-
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: floatIcon 3s ease-in-out infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1.5rem;
-    background: rgba(var(--primary-rgb), 0.1);
-    border-radius: 50%;
+    animation: bounce 2s infinite;
+    display: inline-block;
     color: var(--primary);
-    transition: all 0.3s ease;
-}
-
-@keyframes floatIcon {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
 }
 
 .service-card h3 {
@@ -439,65 +407,6 @@ header nav {
 .whatsapp-help-button i {
     margin-right: 8px;
     font-size: 20px;
-}
-
-/* WhatsApp Chat Widget */
-.chat-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    text-align: center;
-    z-index: 1000;
-}
-
-.chat-box {
-    display: none;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    margin-bottom: 1rem;
-    min-width: 250px;
-    animation: slideIn 0.3s ease-out;
-    transform-origin: bottom right;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.chat-box p {
-    color: #374151;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-.chat-container button {
-    background-color: #25D366;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-}
-
-.chat-container button:hover {
-    background-color: #20ba57;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
 }
 
 /* Location section */
@@ -943,24 +852,21 @@ header nav {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1.5rem;
-    padding: 0 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-        padding: 0 2rem;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0;
     }
 }
 
@@ -969,18 +875,14 @@ header nav {
     overflow: hidden;
     background-color: white;
     border-radius: 0.5rem;
-    padding: 1.25rem;
+    padding: 1.5rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     transform: translateY(0);
     opacity: 1;
     animation: fadeInUp 0.6s ease forwards;
     cursor: pointer;
     text-decoration: none;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .service-card::before {
@@ -1038,37 +940,12 @@ header nav {
     transform: translateY(-8px);
 }
 
-.service-card:hover .service-icon {
-    transform: scale(1.1);
-    background: rgba(var(--primary-rgb), 0.2);
-}
-
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: floatIcon 3s ease-in-out infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1.5rem;
-    background: rgba(var(--primary-rgb), 0.1);
-    border-radius: 50%;
+    animation: bounce 2s infinite;
+    display: inline-block;
     color: var(--primary);
-    transition: all 0.3s ease;
-}
-
-@keyframes floatIcon {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
 }
 
 .service-card h3 {
@@ -1179,65 +1056,6 @@ header nav {
 .whatsapp-help-button i {
     margin-right: 8px;
     font-size: 20px;
-}
-
-/* WhatsApp Chat Widget */
-.chat-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    text-align: center;
-    z-index: 1000;
-}
-
-.chat-box {
-    display: none;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    margin-bottom: 1rem;
-    min-width: 250px;
-    animation: slideIn 0.3s ease-out;
-    transform-origin: bottom right;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.chat-box p {
-    color: #374151;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-.chat-container button {
-    background-color: #25D366;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-}
-
-.chat-container button:hover {
-    background-color: #20ba57;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
 }
 
 /* Location section */
@@ -1683,24 +1501,21 @@ header nav {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1.5rem;
-    padding: 0 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-        padding: 0 2rem;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0;
     }
 }
 
@@ -1709,18 +1524,14 @@ header nav {
     overflow: hidden;
     background-color: white;
     border-radius: 0.5rem;
-    padding: 1.25rem;
+    padding: 1.5rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     transform: translateY(0);
     opacity: 1;
     animation: fadeInUp 0.6s ease forwards;
     cursor: pointer;
     text-decoration: none;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .service-card::before {
@@ -1778,37 +1589,12 @@ header nav {
     transform: translateY(-8px);
 }
 
-.service-card:hover .service-icon {
-    transform: scale(1.1);
-    background: rgba(var(--primary-rgb), 0.2);
-}
-
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: floatIcon 3s ease-in-out infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1.5rem;
-    background: rgba(var(--primary-rgb), 0.1);
-    border-radius: 50%;
+    animation: bounce 2s infinite;
+    display: inline-block;
     color: var(--primary);
-    transition: all 0.3s ease;
-}
-
-@keyframes floatIcon {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
 }
 
 .service-card h3 {
@@ -1919,65 +1705,6 @@ header nav {
 .whatsapp-help-button i {
     margin-right: 8px;
     font-size: 20px;
-}
-
-/* WhatsApp Chat Widget */
-.chat-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    text-align: center;
-    z-index: 1000;
-}
-
-.chat-box {
-    display: none;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    margin-bottom: 1rem;
-    min-width: 250px;
-    animation: slideIn 0.3s ease-out;
-    transform-origin: bottom right;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.chat-box p {
-    color: #374151;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-.chat-container button {
-    background-color: #25D366;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-}
-
-.chat-container button:hover {
-    background-color: #20ba57;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
 }
 
 /* Location section */
@@ -2423,24 +2150,21 @@ header nav {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1.5rem;
-    padding: 0 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-        padding: 0 2rem;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0;
     }
 }
 
@@ -2449,18 +2173,14 @@ header nav {
     overflow: hidden;
     background-color: white;
     border-radius: 0.5rem;
-    padding: 1.25rem;
+    padding: 1.5rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     transform: translateY(0);
     opacity: 1;
     animation: fadeInUp 0.6s ease forwards;
     cursor: pointer;
     text-decoration: none;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .service-card::before {
@@ -2518,37 +2238,12 @@ header nav {
     transform: translateY(-8px);
 }
 
-.service-card:hover .service-icon {
-    transform: scale(1.1);
-    background: rgba(var(--primary-rgb), 0.2);
-}
-
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: floatIcon 3s ease-in-out infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1.5rem;
-    background: rgba(var(--primary-rgb), 0.1);
-    border-radius: 50%;
+    animation: bounce 2s infinite;
+    display: inline-block;
     color: var(--primary);
-    transition: all 0.3s ease;
-}
-
-@keyframes floatIcon {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
 }
 
 .service-card h3 {
@@ -2659,65 +2354,6 @@ header nav {
 .whatsapp-help-button i {
     margin-right: 8px;
     font-size: 20px;
-}
-
-/* WhatsApp Chat Widget */
-.chat-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    text-align: center;
-    z-index: 1000;
-}
-
-.chat-box {
-    display: none;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    margin-bottom: 1rem;
-    min-width: 250px;
-    animation: slideIn 0.3s ease-out;
-    transform-origin: bottom right;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.chat-box p {
-    color: #374151;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-.chat-container button {
-    background-color: #25D366;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-}
-
-.chat-container button:hover {
-    background-color: #20ba57;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
 }
 
 /* Location section */
@@ -3163,24 +2799,21 @@ header nav {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1.5rem;
-    padding: 0 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-        padding: 0 2rem;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0;
     }
 }
 
@@ -3189,18 +2822,14 @@ header nav {
     overflow: hidden;
     background-color: white;
     border-radius: 0.5rem;
-    padding: 1.25rem;
+    padding: 1.5rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     transform: translateY(0);
     opacity: 1;
     animation: fadeInUp 0.6s ease forwards;
     cursor: pointer;
     text-decoration: none;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .service-card::before {
@@ -3258,37 +2887,12 @@ header nav {
     transform: translateY(-8px);
 }
 
-.service-card:hover .service-icon {
-    transform: scale(1.1);
-    background: rgba(var(--primary-rgb), 0.2);
-}
-
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: floatIcon 3s ease-in-out infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1.5rem;
-    background: rgba(var(--primary-rgb), 0.1);
-    border-radius: 50%;
+    animation: bounce 2s infinite;
+    display: inline-block;
     color: var(--primary);
-    transition: all 0.3s ease;
-}
-
-@keyframes floatIcon {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
 }
 
 .service-card h3 {
@@ -3399,65 +3003,6 @@ header nav {
 .whatsapp-help-button i {
     margin-right: 8px;
     font-size: 20px;
-}
-
-/* WhatsApp Chat Widget */
-.chat-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    text-align: center;
-    z-index: 1000;
-}
-
-.chat-box {
-    display: none;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    margin-bottom: 1rem;
-    min-width: 250px;
-    animation: slideIn 0.3s ease-out;
-    transform-origin: bottom right;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.chat-box p {
-    color: #374151;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-.chat-container button {
-    background-color: #25D366;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-}
-
-.chat-container button:hover {
-    background-color: #20ba57;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
 }
 
 /* Location section */
@@ -3903,24 +3448,21 @@ header nav {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1.5rem;
-    padding: 0 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-        padding: 0 2rem;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0;
     }
 }
 
@@ -3929,18 +3471,14 @@ header nav {
     overflow: hidden;
     background-color: white;
     border-radius: 0.5rem;
-    padding: 1.25rem;
+    padding: 1.5rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     transform: translateY(0);
     opacity: 1;
     animation: fadeInUp 0.6s ease forwards;
     cursor: pointer;
     text-decoration: none;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .service-card::before {
@@ -3998,37 +3536,12 @@ header nav {
     transform: translateY(-8px);
 }
 
-.service-card:hover .service-icon {
-    transform: scale(1.1);
-    background: rgba(var(--primary-rgb), 0.2);
-}
-
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: floatIcon 3s ease-in-out infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1.5rem;
-    background: rgba(var(--primary-rgb), 0.1);
-    border-radius: 50%;
+    animation: bounce 2s infinite;
+    display: inline-block;
     color: var(--primary);
-    transition: all 0.3s ease;
-}
-
-@keyframes floatIcon {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
 }
 
 .service-card h3 {
@@ -4139,65 +3652,6 @@ header nav {
 .whatsapp-help-button i {
     margin-right: 8px;
     font-size: 20px;
-}
-
-/* WhatsApp Chat Widget */
-.chat-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    text-align: center;
-    z-index: 1000;
-}
-
-.chat-box {
-    display: none;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    margin-bottom: 1rem;
-    min-width: 250px;
-    animation: slideIn 0.3s ease-out;
-    transform-origin: bottom right;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.chat-box p {
-    color: #374151;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-.chat-container button {
-    background-color: #25D366;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-}
-
-.chat-container button:hover {
-    background-color: #20ba57;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
 }
 
 /* Location section */
@@ -4643,24 +4097,21 @@ header nav {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1.5rem;
-    padding: 0 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-        padding: 0 2rem;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0;
     }
 }
 
@@ -4669,18 +4120,14 @@ header nav {
     overflow: hidden;
     background-color: white;
     border-radius: 0.5rem;
-    padding: 1.25rem;
+    padding: 1.5rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     transform: translateY(0);
     opacity: 1;
     animation: fadeInUp 0.6s ease forwards;
     cursor: pointer;
     text-decoration: none;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .service-card::before {
@@ -4738,37 +4185,12 @@ header nav {
     transform: translateY(-8px);
 }
 
-.service-card:hover .service-icon {
-    transform: scale(1.1);
-    background: rgba(var(--primary-rgb), 0.2);
-}
-
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: floatIcon 3s ease-in-out infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1.5rem;
-    background: rgba(var(--primary-rgb), 0.1);
-    border-radius: 50%;
+    animation: bounce 2s infinite;
+    display: inline-block;
     color: var(--primary);
-    transition: all 0.3s ease;
-}
-
-@keyframes floatIcon {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
 }
 
 .service-card h3 {
@@ -4879,65 +4301,6 @@ header nav {
 .whatsapp-help-button i {
     margin-right: 8px;
     font-size: 20px;
-}
-
-/* WhatsApp Chat Widget */
-.chat-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    text-align: center;
-    z-index: 1000;
-}
-
-.chat-box {
-    display: none;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    margin-bottom: 1rem;
-    min-width: 250px;
-    animation: slideIn 0.3s ease-out;
-    transform-origin: bottom right;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.chat-box p {
-    color: #374151;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-.chat-container button {
-    background-color: #25D366;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-}
-
-.chat-container button:hover {
-    background-color: #20ba57;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
 }
 
 /* Location section */
