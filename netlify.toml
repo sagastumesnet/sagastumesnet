@@ -1,9 +1,6 @@
 [build]
-  command = "npm run build"
-  publish = "out"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+  publish = "."
+  command = "# no build command needed for static site"
 
 [[redirects]]
   from = "/*"
