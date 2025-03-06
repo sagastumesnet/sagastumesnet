@@ -7,33 +7,22 @@
     <meta name="description" content="Ofrecemos servicios de trámites en línea como SAT, Agencia Virtual, NIT, traspasos, pagos de impuestos y más.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="/styles.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add smooth scrolling to all service cards and links
-            document.querySelectorAll('.service-card, a[href^="#"]').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    if (this.tagName === 'A' || this.classList.contains('service-card')) {
-                        e.preventDefault();
-                        let targetId = this.tagName === 'A' ? this.getAttribute('href') : '#contacto';
-                        let targetElement = document.querySelector(targetId);
-                        if (targetElement) {
-                            targetElement.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                        }
-                    }
-                });
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Open Graph meta tags -->
+<meta property="og:title" content="Sagastumes Net">
+<meta property="og:description" content="Trámites y servicios digitales rápidos y seguros.">
+<meta property="og:image" content="https://sagastumes.net/logo.png">
+<meta property="og:url" content="https://sagastumes.net">
+<meta property="og:type" content="website">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
 </head>
 <body>
     <header class="nav">
         <nav class="nav-content container">
             <div class="logo">
-                <img src="/logo.png" alt="Sagastumes.Net Logo" class="h-12">
+                <img src="/logo.png" alt="Sagastumes.Net Logo" class="nav-logo">
             </div>
             <div class="nav-menu">
                 <a href="#servicios">Servicios</a>
@@ -64,98 +53,98 @@
                         <div class="service-icon">🆔</div>
                         <h3>Creación de NIT</h3>
                         <p>Obtención rápida de su Número de Identificación Tributaria</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">💰</div>
                         <h3>Pago de Impuestos</h3>
                         <p>Gestión y pago de impuestos ante la SAT</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">💻</div>
                         <h3>Agencia Virtual SAT</h3>
                         <p>Gestión de trámites en línea de la SAT</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">📋</div>
                         <h3>Finiquito CGC</h3>
                         <p>Actualización, finiquito y adhesión de Contraloría</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">🎓</div>
                         <h3>Registro de Títulos</h3>
                         <p>Registro de títulos de diversificado</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">📝</div>
                         <h3>RTU</h3>
                         <p>Actualización y gestión de RTU</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">📋</div>
                         <h3>Licencias Sanitarias</h3>
                         <p>Trámites de licencias sanitarias</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">🏭</div>
                         <h3>Registro de Marcas</h3>
                         <p>Registro y protección de marcas</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">📜</div>
                         <h3>Antecedentes</h3>
                         <p>Antecedentes penales y policíacos</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
 
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">📄</div>
                         <h3>Certificados RENAP</h3>
                         <p>Gestión de certificados del registro civil</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">⚖️</div>
                         <h3>Antecedentes</h3>
                         <p>Penales, policiales, RENAS y migratorios</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">📊</div>
                         <h3>Declaraguate</h3>
                         <p>Gestión y actualización de declaraciones</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">💼</div>
                         <h3>Contabilidad</h3>
                         <p>Servicios contables y financieros</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">🏪</div>
                         <h3>Inscripción de Negocios</h3>
                         <p>Registro y patentes de comercio</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">✈️</div>
                         <h3>Pasaportes</h3>
                         <p>Renovación y nuevos pasaportes</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">🚗</div>
                         <h3>Traspasos en Línea</h3>
                         <p>Gestión de traspasos vehiculares</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                 </div>
                 
@@ -165,62 +154,62 @@
                         <div class="service-icon">🚗</div>
                         <h3>Expertajes Vehiculares</h3>
                         <p>Inspección y certificación de vehículos</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">💻</div>
                         <h3>Software Original</h3>
                         <p>Office, antivirus y licencias digitales</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">🔧</div>
                         <h3>Servicios Tecnológicos</h3>
                         <p>Reparación de computadoras y venta de equipos</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">₿</div>
                         <h3>Asesoría en Criptomonedas</h3>
                         <p>Seguridad, trading y almacenamiento</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">🚦</div>
                         <h3>Multas de Tránsito</h3>
                         <p>Verificación y pago de infracciones viales</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">🖨️</div>
                         <h3>Servicios de Impresión</h3>
                         <p>Impresión de fotos y documentos en alta calidad</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">📄</div>
                         <h3>Escaneo y Digitalización</h3>
                         <p>Copiado y digitalización de documentos</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">💳</div>
                         <h3>Pagos Electrónicos</h3>
                         <p>Transferencias y pagos en línea seguros</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
 
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">🔄</div>
                         <h3>Activación Vehicular</h3>
                         <p>Inactivación y activación de vehículos</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                     <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">📊</div>
                         <h3>Pequeño Contribuyente</h3>
                         <p>Registro y gestión de pequeño contribuyente</p>
-                        <a href="#contacto" class="service-link" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Más información <span class="arrow-right">→</span></a>
+                        <a href="#contacto" class="service-link">Más información <span class="arrow-right">→</span></a>
                     </div>
                 </div>
             </div>
@@ -263,63 +252,42 @@
                     <h2>¿Necesita Ayuda con un Trámite?</h2>
                     <p>Estamos aquí para ayudarle. Contáctenos y le brindaremos la mejor asesoría.</p>
                     <div class="contact-buttons">
-                        <a href="tel:+50238660653" class="btn-primary contact-button call">Llamar Ahora</a>
-                        <a href="mailto:info@sagastumes.net" class="btn-secondary contact-button email">Enviar Email</a>
-                        <a href="https://wa.me/50238660653" class="btn-whatsapp contact-button whatsapp" target="_blank">Contactar por WhatsApp</a>
+                        <a href="tel:+50238660653" class="btn-primary">Llamar Ahora</a>
+                        <a href="mailto:info@sagastumes.net" class="btn-secondary">Enviar Email</a>
+                        <a href="https://wa.me/50238660653" class="whatsapp-help-button" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            Contactar por WhatsApp
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Sección de Nuestra Ubicación -->
+
+        <!-- Location Section -->
         <section id="ubicacion" class="location">
             <div class="container">
                 <div class="location-content">
                     <h2>Nuestra Ubicación</h2>
-                    <p>Visítenos en nuestras oficinas centrales</p>
                     <div class="location-card">
                         <p class="location-label">Dirección:</p>
-                        <p class="location-text">[Tu dirección aquí]</p>
+                        <p class="location-text">Calle Principal, a la par Coliseo Municipal</p>
+                        <p class="location-text">San Jacinto, Chiquimula</p>
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.6213693812106!2d-89.50535272403008!3d14.677416185818005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f623637616c10d1%3A0xbee49bfa560021bd!2sSagastume's%20Internet!5e0!3m2!1ses!2sgt!4v1740930127102!5m2!1ses!2sgt"
+                                width="100%"
+                                height="200"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
                         <p class="location-label">Horario de Atención:</p>
-                        <p class="location-text">Lunes a Viernes: 8:00 AM - 6:00 PM</p>
-                        <p class="location-text">Sábado: 8:00 AM - 1:00 PM</p>
+                        <p class="location-text">Lunes a Viernes: 7:00 AM - 6:00 PM</p>
+                        <p class="location-text">(Almuerzo: 12:00 PM - 1:00 PM)</p>
+                        <p class="location-text">Sábados y Domingos: 8:00 AM - 5:00 PM</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de Redes Sociales -->
-        <section id="redes-sociales" class="social">
-            <div class="container">
-                <h2>Síguenos en Redes Sociales</h2>
-                <div class="social-links">
-                    <a href="https://www.tiktok.com/@sagastumesnet" target="_blank" class="social-link tiktok">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                    <a href="https://www.facebook.com/SagastumesInternet" target="_blank" class="social-link facebook">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/sagastumesnet" target="_blank" class="social-link instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://wa.me/50238660653" target="_blank" class="social-link whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de Guía para Escanear Documentos -->
-        <section id="guia-escaneo" class="scan-guide">
-            <div class="container">
-                <div class="scan-guide-content">
-                    <h2>Guía para Escanear Documentos</h2>
-                    <p>Siga estos pasos para escanear y enviar sus documentos correctamente:</p>
-                    <ol class="scan-steps">
-                        <li>Utilice una aplicación de escaneo como <strong>Adobe Scan</strong> o <strong>CamScanner</strong>.</li>
-                        <li>Asegúrese de que el documento esté bien iluminado y sin sombras.</li>
-                        <li>Guarde el archivo en formato PDF o imagen.</li>
-                        <li>Envíelo a nuestro correo <a href="mailto:info@sagastumes.net">info@sagastumes.net</a> o por WhatsApp.</li>
-                    </ol>
                 </div>
             </div>
         </section>
@@ -327,8 +295,133 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2014-2025 Sagastumes.Net. Todos los derechos reservados.</p>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Sagastumes.Net</h3>
+                    <p>Su socio confiable para trámites y servicios en línea</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Teléfono: +502 3866 0653</p>
+                    <p>Email: info@sagastumes.net</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/SagastumesInternet" target="_blank" class="social-link facebook" title="Síguenos en Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/50238660653" target="_blank" class="social-link whatsapp" title="Contáctanos por WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/sagastumesnet/" target="_blank" class="social-link instagram" title="Síguenos en Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@sagastumes.net" target="_blank" class="social-link tiktok" title="Síguenos en TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Horario</h3>
+                    <p>Lunes a Viernes: 7:00 AM - 6:00 PM</p>
+                    <p>(Almuerzo: 12:00 PM - 1:00 PM)</p>
+                    <p>Sábados y Domingos: 8:00 AM - 5:00 PM</p>
+                </div>
+            </div>
         </div>
     </footer>
-</body>
-</html>
+
+    <!-- Service Details Modal -->
+    <div id="serviceDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2 id="serviceTitle"></h2>
+                <p id="serviceDescription"></p>
+            </div>
+            <div class="modal-body">
+                <ul class="service-details-list" id="serviceDetailsList"></ul>
+            </div>
+            <button onclick="showRegistrationForm()" class="btn-primary">Solicitar este Servicio</button>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Registro para <span id="selectedService"></span></h2>
+                <p>Complete el formulario y nos pondremos en contacto con usted pronto.</p>
+            </div>
+            <form id="registrationForm" onsubmit="handleRegistration(event)">
+                <div class="form-group">
+                    <label for="phone">Número de Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{8}" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Nombre Completo:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="details">Detalles del Trámite:</label>
+                    <textarea id="details" name="details" rows="4" placeholder="Describa brevemente su necesidad..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Registrar Solicitud</button>
+            </form>
+        </div>
+    </div>
+
+<section id="guia-escaneo" class="scanning-guide">
+    <div class="container">
+        <div class="guide-content">
+            <h2>Guía para Escanear su DPI</h2>
+            <p>Para garantizar la mejor calidad en sus trámites, siga estas instrucciones al escanear su DPI:</p>
+            
+            <div class="guide-steps">
+                <div class="guide-step">
+                    <div class="step-icon">📱</div>
+                    <h3>1. Prepare su Dispositivo</h3>
+                    <p>Use un escáner o una aplicación de escaneo en su teléfono como Adobe Scan, Microsoft Lens o Google Drive.</p>
+                </div>
+                
+                <div class="guide-step">
+                    <div class="step-icon">🔍</div>
+                    <h3>2. Configuración</h3>
+                    <p>Configure la resolución a 300 DPI o más para obtener la mejor calidad.</p>
+                </div>
+                
+                <div class="guide-step">
+                    <div class="step-icon">📄</div>
+                    <h3>3. Posicionamiento</h3>
+                    <p>Coloque su DPI sobre una superficie plana y bien iluminada. Use un fondo blanco o claro.</p>
+                </div>
+                
+                <div class="guide-step">
+                    <div class="step-icon">🔄</div>
+                    <h3>4. Escanee Ambos Lados</h3>
+                    <p>Escanee tanto el frente como el reverso del DPI. Asegúrese de que toda la información sea legible.</p>
+                </div>
+                
+                <div class="guide-step">
+                    <div class="step-icon">✨</div>
+                    <h3>5. Verifique la Calidad</h3>
+                    <p>Revise que la imagen sea clara, sin sombras ni reflejos, y que todos los datos sean legibles.</p>
+                </div>
+            </div>
+            
+            <div class="guide-tips">
+                <h3>Consejos Importantes:</h3>
+                <ul>
+                    <li>Evite usar flash para prevenir reflejos</li>
+                    <li>Mantenga el documento completamente plano</li>
+                    <li>Asegúrese de que no haya sombras en la imagen</li>
+                    <li>Capture el documento completo, incluyendo los bordes</li>
+                </ul>
+            </div>
+            
+            <div class="guide-help">
+                <p>¿Necesita ayuda con el escaneo? Contáctenos y con gusto le asistiremos.</p>
+                <a href="#contacto" class="btn-primary">Solicitar Asistencia</a>
+            </div>
+        </div>
+    </div>
+</section>
