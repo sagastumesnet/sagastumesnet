@@ -7,6 +7,7 @@ const multer = require('multer');
 const { Client } = require('@notionhq/client');
 const tesseract = require('tesseract.js');
 const PDFDocument = require('pdfkit');
+<<<<<<< HEAD
 const WebSocket = require('ws');
 const http = require('http');
 require('dotenv').config();
@@ -47,6 +48,10 @@ const notifyClients = (type, data) => {
     });
 };
 
+=======
+require('dotenv').config();
+
+>>>>>>> 4c7bd23a480803b914367abbdfa6b801dcf51b59
 // Configure Notion client
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
@@ -195,6 +200,7 @@ app.post('/api/service-requests', auth, upload.single('dpiDocument'), async (req
         // Send notification
         await sendNotification(req.user, serviceRequest);
         
+<<<<<<< HEAD
         // Notify all connected clients about the new service request
         notifyClients('newServiceRequest', {
             id: serviceRequest._id,
@@ -203,6 +209,8 @@ app.post('/api/service-requests', auth, upload.single('dpiDocument'), async (req
             createdAt: serviceRequest.createdAt
         });
         
+=======
+>>>>>>> 4c7bd23a480803b914367abbdfa6b801dcf51b59
         res.status(201).send(serviceRequest);
     } catch (error) {
         res.status(400).send(error);
