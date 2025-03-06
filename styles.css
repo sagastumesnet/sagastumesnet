@@ -1,7 +1,3 @@
-html {
-    scroll-behavior: smooth;
-}
-
 /* Base styles */
 :root {
     --primary: #1a365d;
@@ -31,44 +27,23 @@ body {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-.nav {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-content {
+header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1.25rem 0;
+    position: relative;
 }
 
-.nav-logo {
+.logo img {
     height: 48px;
     width: auto;
 }
 
-.nav-menu {
+.nav-links {
     display: flex;
     gap: 2rem;
     align-items: center;
-}
-
-.nav-menu a {
-    color: #374151;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    transition: all 0.3s ease;
-}
-
-.nav-menu a:hover {
-    color: var(--primary);
-    background-color: #f3f4f6;
 }
 
 .nav-links a {
@@ -123,7 +98,44 @@ body {
     }
 }
 
-/* Removed animation delays for better performance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+.service-card:nth-child(5) { animation-delay: 0.5s; }
+.service-card:nth-child(6) { animation-delay: 0.6s; }
+.service-card:nth-child(7) { animation-delay: 0.7s; }
+.service-card:nth-child(8) { animation-delay: 0.8s; }
+.service-card:nth-child(9) { animation-delay: 0.9s; }
+.service-card:nth-child(10) { animation-delay: 1s; }
+.service-card:nth-child(11) { animation-delay: 1.1s; }
+.service-card:nth-child(12) { animation-delay: 1.2s; }
+.service-card:nth-child(13) { animation-delay: 1.3s; }
+.service-card:nth-child(14) { animation-delay: 1.4s; }
+.service-card:nth-child(15) { animation-delay: 1.5s; }
 
 .service-card:hover {
     background: linear-gradient(90deg, var(--secondary), var(--primary));
@@ -224,21 +236,20 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 @media (min-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
 }
 
 @media (min-width: 1024px) {
     .services-grid {
         grid-template-columns: repeat(3, 1fr);
-        max-width: 1200px;
-        margin: 0 auto;
     }
 }
 
@@ -251,10 +262,8 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
     transform: translateY(0);
-    opacity: 1;
+    opacity: 0;
     animation: fadeInUp 0.6s ease forwards;
-    cursor: pointer;
-    text-decoration: none;
 }
 
 .service-card::before {
@@ -279,7 +288,6 @@ body {
     position: relative;
     z-index: 2;
     transition: opacity 0.3s ease;
-    opacity: 1;
 }
 
 .service-card .service-details {
@@ -294,8 +302,6 @@ body {
     transition: all 0.4s ease;
     z-index: 2;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 0.5rem;
 }
 
 .service-card:hover .service-details {
@@ -308,29 +314,46 @@ body {
 }
 
 .service-card:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 128, 255, 0.2);
+    transform: translateY(-12px) scale(1.02);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: bounce 2s infinite;
-    display: inline-block;
-    color: var(--primary);
+    display: block;
+    text-align: center;
+    animation: floatIcon 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+@keyframes floatIcon {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
 }
 
 .service-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--primary);
 }
 
 .service-card p {
-    color: #374151;
+    color: #6b7280;
     margin-bottom: 1rem;
-    line-height: 1.6;
 }
 
 .service-link {
@@ -343,6 +366,126 @@ body {
 
 .service-link:hover {
     color: var(--primary-dark);
+}
+
+/* Contact section */
+.contact {
+    padding: 4rem 0;
+}
+
+.contact-content {
+    max-width: 42rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.contact p {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .contact-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .contact-buttons .contact-button {
+        width: auto;
+    }
+    
+    /* Reorder buttons */
+    .contact-button.call { order: 1; }
+    .contact-button.whatsapp { order: 2; }
+    .contact-button.email { order: 3; }
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20ba57;
+}
+
+.whatsapp-float i {
+    font-size: 32px;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.contact-button i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.contact-button.whatsapp {
+    background-color: #25D366;
+}
+
+.contact-button.email {
+    background-color: #f97316;
+    color: white;
+}
+
+.contact-button.call {
+    background-color: #2563eb;
+}
+
+.contact-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.whatsapp-help-button:hover {
+    background-color: #20ba57;
+    transform: translateY(-2px);
+}
+
+.whatsapp-help-button i {
+    margin-right: 8px;
+    font-size: 20px;
 }
 
 /* Location section */
@@ -788,21 +931,20 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 @media (min-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
 }
 
 @media (min-width: 1024px) {
     .services-grid {
         grid-template-columns: repeat(3, 1fr);
-        max-width: 1200px;
-        margin: 0 auto;
     }
 }
 
@@ -815,10 +957,8 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
     transform: translateY(0);
-    opacity: 1;
+    opacity: 0;
     animation: fadeInUp 0.6s ease forwards;
-    cursor: pointer;
-    text-decoration: none;
 }
 
 .service-card::before {
@@ -843,7 +983,6 @@ body {
     position: relative;
     z-index: 2;
     transition: opacity 0.3s ease;
-    opacity: 1;
 }
 
 .service-card .service-details {
@@ -858,8 +997,6 @@ body {
     transition: all 0.4s ease;
     z-index: 2;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 0.5rem;
 }
 
 .service-card:hover .service-details {
@@ -872,29 +1009,46 @@ body {
 }
 
 .service-card:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 128, 255, 0.2);
+    transform: translateY(-12px) scale(1.02);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: bounce 2s infinite;
-    display: inline-block;
-    color: var(--primary);
+    display: block;
+    text-align: center;
+    animation: floatIcon 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+@keyframes floatIcon {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
 }
 
 .service-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--primary);
 }
 
 .service-card p {
-    color: #374151;
+    color: #6b7280;
     margin-bottom: 1rem;
-    line-height: 1.6;
 }
 
 .service-link {
@@ -907,6 +1061,126 @@ body {
 
 .service-link:hover {
     color: var(--primary-dark);
+}
+
+/* Contact section */
+.contact {
+    padding: 4rem 0;
+}
+
+.contact-content {
+    max-width: 42rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.contact p {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .contact-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .contact-buttons .contact-button {
+        width: auto;
+    }
+    
+    /* Reorder buttons */
+    .contact-button.call { order: 1; }
+    .contact-button.whatsapp { order: 2; }
+    .contact-button.email { order: 3; }
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20ba57;
+}
+
+.whatsapp-float i {
+    font-size: 32px;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.contact-button i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.contact-button.whatsapp {
+    background-color: #25D366;
+}
+
+.contact-button.email {
+    background-color: #f97316;
+    color: white;
+}
+
+.contact-button.call {
+    background-color: #2563eb;
+}
+
+.contact-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.whatsapp-help-button:hover {
+    background-color: #20ba57;
+    transform: translateY(-2px);
+}
+
+.whatsapp-help-button i {
+    margin-right: 8px;
+    font-size: 20px;
 }
 
 /* Location section */
@@ -1352,21 +1626,20 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 @media (min-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
 }
 
 @media (min-width: 1024px) {
     .services-grid {
         grid-template-columns: repeat(3, 1fr);
-        max-width: 1200px;
-        margin: 0 auto;
     }
 }
 
@@ -1379,10 +1652,8 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
     transform: translateY(0);
-    opacity: 1;
+    opacity: 0;
     animation: fadeInUp 0.6s ease forwards;
-    cursor: pointer;
-    text-decoration: none;
 }
 
 .service-card::before {
@@ -1407,7 +1678,6 @@ body {
     position: relative;
     z-index: 2;
     transition: opacity 0.3s ease;
-    opacity: 1;
 }
 
 .service-card .service-details {
@@ -1422,8 +1692,6 @@ body {
     transition: all 0.4s ease;
     z-index: 2;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 0.5rem;
 }
 
 .service-card:hover .service-details {
@@ -1436,29 +1704,46 @@ body {
 }
 
 .service-card:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 128, 255, 0.2);
+    transform: translateY(-12px) scale(1.02);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: bounce 2s infinite;
-    display: inline-block;
-    color: var(--primary);
+    display: block;
+    text-align: center;
+    animation: floatIcon 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+@keyframes floatIcon {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
 }
 
 .service-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--primary);
 }
 
 .service-card p {
-    color: #374151;
+    color: #6b7280;
     margin-bottom: 1rem;
-    line-height: 1.6;
 }
 
 .service-link {
@@ -1471,6 +1756,126 @@ body {
 
 .service-link:hover {
     color: var(--primary-dark);
+}
+
+/* Contact section */
+.contact {
+    padding: 4rem 0;
+}
+
+.contact-content {
+    max-width: 42rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.contact p {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .contact-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .contact-buttons .contact-button {
+        width: auto;
+    }
+    
+    /* Reorder buttons */
+    .contact-button.call { order: 1; }
+    .contact-button.whatsapp { order: 2; }
+    .contact-button.email { order: 3; }
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20ba57;
+}
+
+.whatsapp-float i {
+    font-size: 32px;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.contact-button i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.contact-button.whatsapp {
+    background-color: #25D366;
+}
+
+.contact-button.email {
+    background-color: #f97316;
+    color: white;
+}
+
+.contact-button.call {
+    background-color: #2563eb;
+}
+
+.contact-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.whatsapp-help-button:hover {
+    background-color: #20ba57;
+    transform: translateY(-2px);
+}
+
+.whatsapp-help-button i {
+    margin-right: 8px;
+    font-size: 20px;
 }
 
 /* Location section */
@@ -1916,21 +2321,20 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 @media (min-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
 }
 
 @media (min-width: 1024px) {
     .services-grid {
         grid-template-columns: repeat(3, 1fr);
-        max-width: 1200px;
-        margin: 0 auto;
     }
 }
 
@@ -1943,10 +2347,8 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
     transform: translateY(0);
-    opacity: 1;
+    opacity: 0;
     animation: fadeInUp 0.6s ease forwards;
-    cursor: pointer;
-    text-decoration: none;
 }
 
 .service-card::before {
@@ -1971,7 +2373,6 @@ body {
     position: relative;
     z-index: 2;
     transition: opacity 0.3s ease;
-    opacity: 1;
 }
 
 .service-card .service-details {
@@ -1986,8 +2387,6 @@ body {
     transition: all 0.4s ease;
     z-index: 2;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 0.5rem;
 }
 
 .service-card:hover .service-details {
@@ -2000,29 +2399,46 @@ body {
 }
 
 .service-card:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 128, 255, 0.2);
+    transform: translateY(-12px) scale(1.02);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: bounce 2s infinite;
-    display: inline-block;
-    color: var(--primary);
+    display: block;
+    text-align: center;
+    animation: floatIcon 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+@keyframes floatIcon {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
 }
 
 .service-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--primary);
 }
 
 .service-card p {
-    color: #374151;
+    color: #6b7280;
     margin-bottom: 1rem;
-    line-height: 1.6;
 }
 
 .service-link {
@@ -2035,6 +2451,126 @@ body {
 
 .service-link:hover {
     color: var(--primary-dark);
+}
+
+/* Contact section */
+.contact {
+    padding: 4rem 0;
+}
+
+.contact-content {
+    max-width: 42rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.contact p {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .contact-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .contact-buttons .contact-button {
+        width: auto;
+    }
+    
+    /* Reorder buttons */
+    .contact-button.call { order: 1; }
+    .contact-button.whatsapp { order: 2; }
+    .contact-button.email { order: 3; }
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20ba57;
+}
+
+.whatsapp-float i {
+    font-size: 32px;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.contact-button i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.contact-button.whatsapp {
+    background-color: #25D366;
+}
+
+.contact-button.email {
+    background-color: #f97316;
+    color: white;
+}
+
+.contact-button.call {
+    background-color: #2563eb;
+}
+
+.contact-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.whatsapp-help-button:hover {
+    background-color: #20ba57;
+    transform: translateY(-2px);
+}
+
+.whatsapp-help-button i {
+    margin-right: 8px;
+    font-size: 20px;
 }
 
 /* Location section */
@@ -2480,21 +3016,20 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 @media (min-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
 }
 
 @media (min-width: 1024px) {
     .services-grid {
         grid-template-columns: repeat(3, 1fr);
-        max-width: 1200px;
-        margin: 0 auto;
     }
 }
 
@@ -2507,10 +3042,8 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
     transform: translateY(0);
-    opacity: 1;
+    opacity: 0;
     animation: fadeInUp 0.6s ease forwards;
-    cursor: pointer;
-    text-decoration: none;
 }
 
 .service-card::before {
@@ -2535,7 +3068,6 @@ body {
     position: relative;
     z-index: 2;
     transition: opacity 0.3s ease;
-    opacity: 1;
 }
 
 .service-card .service-details {
@@ -2550,8 +3082,6 @@ body {
     transition: all 0.4s ease;
     z-index: 2;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 0.5rem;
 }
 
 .service-card:hover .service-details {
@@ -2564,29 +3094,46 @@ body {
 }
 
 .service-card:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 128, 255, 0.2);
+    transform: translateY(-12px) scale(1.02);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: bounce 2s infinite;
-    display: inline-block;
-    color: var(--primary);
+    display: block;
+    text-align: center;
+    animation: floatIcon 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+@keyframes floatIcon {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
 }
 
 .service-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--primary);
 }
 
 .service-card p {
-    color: #374151;
+    color: #6b7280;
     margin-bottom: 1rem;
-    line-height: 1.6;
 }
 
 .service-link {
@@ -2599,6 +3146,126 @@ body {
 
 .service-link:hover {
     color: var(--primary-dark);
+}
+
+/* Contact section */
+.contact {
+    padding: 4rem 0;
+}
+
+.contact-content {
+    max-width: 42rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.contact p {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .contact-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .contact-buttons .contact-button {
+        width: auto;
+    }
+    
+    /* Reorder buttons */
+    .contact-button.call { order: 1; }
+    .contact-button.whatsapp { order: 2; }
+    .contact-button.email { order: 3; }
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20ba57;
+}
+
+.whatsapp-float i {
+    font-size: 32px;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.contact-button i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.contact-button.whatsapp {
+    background-color: #25D366;
+}
+
+.contact-button.email {
+    background-color: #f97316;
+    color: white;
+}
+
+.contact-button.call {
+    background-color: #2563eb;
+}
+
+.contact-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.whatsapp-help-button:hover {
+    background-color: #20ba57;
+    transform: translateY(-2px);
+}
+
+.whatsapp-help-button i {
+    margin-right: 8px;
+    font-size: 20px;
 }
 
 /* Location section */
@@ -3044,21 +3711,20 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 @media (min-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
 }
 
 @media (min-width: 1024px) {
     .services-grid {
         grid-template-columns: repeat(3, 1fr);
-        max-width: 1200px;
-        margin: 0 auto;
     }
 }
 
@@ -3071,10 +3737,8 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
     transform: translateY(0);
-    opacity: 1;
+    opacity: 0;
     animation: fadeInUp 0.6s ease forwards;
-    cursor: pointer;
-    text-decoration: none;
 }
 
 .service-card::before {
@@ -3099,7 +3763,6 @@ body {
     position: relative;
     z-index: 2;
     transition: opacity 0.3s ease;
-    opacity: 1;
 }
 
 .service-card .service-details {
@@ -3114,8 +3777,6 @@ body {
     transition: all 0.4s ease;
     z-index: 2;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 0.5rem;
 }
 
 .service-card:hover .service-details {
@@ -3128,29 +3789,46 @@ body {
 }
 
 .service-card:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 128, 255, 0.2);
+    transform: translateY(-12px) scale(1.02);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: bounce 2s infinite;
-    display: inline-block;
-    color: var(--primary);
+    display: block;
+    text-align: center;
+    animation: floatIcon 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+@keyframes floatIcon {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
 }
 
 .service-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--primary);
 }
 
 .service-card p {
-    color: #374151;
+    color: #6b7280;
     margin-bottom: 1rem;
-    line-height: 1.6;
 }
 
 .service-link {
@@ -3163,6 +3841,126 @@ body {
 
 .service-link:hover {
     color: var(--primary-dark);
+}
+
+/* Contact section */
+.contact {
+    padding: 4rem 0;
+}
+
+.contact-content {
+    max-width: 42rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.contact p {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .contact-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .contact-buttons .contact-button {
+        width: auto;
+    }
+    
+    /* Reorder buttons */
+    .contact-button.call { order: 1; }
+    .contact-button.whatsapp { order: 2; }
+    .contact-button.email { order: 3; }
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20ba57;
+}
+
+.whatsapp-float i {
+    font-size: 32px;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.contact-button i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.contact-button.whatsapp {
+    background-color: #25D366;
+}
+
+.contact-button.email {
+    background-color: #f97316;
+    color: white;
+}
+
+.contact-button.call {
+    background-color: #2563eb;
+}
+
+.contact-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.whatsapp-help-button:hover {
+    background-color: #20ba57;
+    transform: translateY(-2px);
+}
+
+.whatsapp-help-button i {
+    margin-right: 8px;
+    font-size: 20px;
 }
 
 /* Location section */
@@ -3608,21 +4406,20 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 @media (min-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
 }
 
 @media (min-width: 1024px) {
     .services-grid {
         grid-template-columns: repeat(3, 1fr);
-        max-width: 1200px;
-        margin: 0 auto;
     }
 }
 
@@ -3635,10 +4432,8 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
     transform: translateY(0);
-    opacity: 1;
+    opacity: 0;
     animation: fadeInUp 0.6s ease forwards;
-    cursor: pointer;
-    text-decoration: none;
 }
 
 .service-card::before {
@@ -3663,7 +4458,6 @@ body {
     position: relative;
     z-index: 2;
     transition: opacity 0.3s ease;
-    opacity: 1;
 }
 
 .service-card .service-details {
@@ -3678,8 +4472,6 @@ body {
     transition: all 0.4s ease;
     z-index: 2;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 0.5rem;
 }
 
 .service-card:hover .service-details {
@@ -3692,29 +4484,46 @@ body {
 }
 
 .service-card:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 128, 255, 0.2);
+    transform: translateY(-12px) scale(1.02);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: bounce 2s infinite;
-    display: inline-block;
-    color: var(--primary);
+    display: block;
+    text-align: center;
+    animation: floatIcon 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+@keyframes floatIcon {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
 }
 
 .service-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--primary);
 }
 
 .service-card p {
-    color: #374151;
+    color: #6b7280;
     margin-bottom: 1rem;
-    line-height: 1.6;
 }
 
 .service-link {
@@ -3727,6 +4536,126 @@ body {
 
 .service-link:hover {
     color: var(--primary-dark);
+}
+
+/* Contact section */
+.contact {
+    padding: 4rem 0;
+}
+
+.contact-content {
+    max-width: 42rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.contact p {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .contact-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .contact-buttons .contact-button {
+        width: auto;
+    }
+    
+    /* Reorder buttons */
+    .contact-button.call { order: 1; }
+    .contact-button.whatsapp { order: 2; }
+    .contact-button.email { order: 3; }
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20ba57;
+}
+
+.whatsapp-float i {
+    font-size: 32px;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.contact-button i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.contact-button.whatsapp {
+    background-color: #25D366;
+}
+
+.contact-button.email {
+    background-color: #f97316;
+    color: white;
+}
+
+.contact-button.call {
+    background-color: #2563eb;
+}
+
+.contact-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.whatsapp-help-button:hover {
+    background-color: #20ba57;
+    transform: translateY(-2px);
+}
+
+.whatsapp-help-button i {
+    margin-right: 8px;
+    font-size: 20px;
 }
 
 /* Location section */
