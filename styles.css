@@ -329,7 +329,7 @@ body {
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -702,7 +702,8 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.1);
+    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.2);
+}, 54, 93, 0.1);
 }
 
 .modal h2 {
@@ -902,7 +903,7 @@ body {
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -1275,7 +1276,8 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.1);
+    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.2);
+}, 54, 93, 0.1);
 }
 
 .modal h2 {
@@ -1475,7 +1477,7 @@ body {
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -1848,7 +1850,8 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.1);
+    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.2);
+}, 54, 93, 0.1);
 }
 
 .modal h2 {
@@ -2048,7 +2051,7 @@ body {
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -2421,7 +2424,8 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.1);
+    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.2);
+}, 54, 93, 0.1);
 }
 
 .modal h2 {
@@ -2621,7 +2625,7 @@ body {
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -2994,7 +2998,8 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.1);
+    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.2);
+}, 54, 93, 0.1);
 }
 
 .modal h2 {
@@ -3194,7 +3199,7 @@ body {
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -3567,7 +3572,8 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.1);
+    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.2);
+}, 54, 93, 0.1);
 }
 
 .modal h2 {
@@ -3767,7 +3773,7 @@ body {
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -4140,4 +4146,5 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(26
+    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.2);
+}
