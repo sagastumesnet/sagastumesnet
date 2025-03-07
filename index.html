@@ -22,16 +22,13 @@
     <header class="nav">
         <nav class="nav-content container">
             <div class="logo">
-                <img src="./public/logo.png" alt="logo" class="nav-logo">
+                <img src="/logo.png" alt="Sagastumes.Net Logo" class="nav-logo">
             </div>
             <div class="nav-menu">
                 <a href="#servicios">Servicios</a>
                 <a href="#contacto">Contacto</a>
                 <a href="#ubicacion">Ubicación</a>
             </div>
-            <button class="mobile-menu-button" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
         </nav>
     </header>
 
@@ -52,7 +49,7 @@
             <div class="container">
                 <h2>Servicios Principales</h2>
                 <div class="services-grid">
-                    <div class="service-card">
+                    <div class="service-card" onclick="window.location.href='#contacto'">
                         <div class="service-icon">🆔</div>
                         <h3>Creación de NIT</h3>
                         <p>Obtención rápida de su Número de Identificación Tributaria</p>
@@ -254,21 +251,14 @@
                 <div class="contact-content">
                     <h2>¿Necesita Ayuda con un Trámite?</h2>
                     <p>Estamos aquí para ayudarle. Contáctenos y le brindaremos la mejor asesoría.</p>
-                    <div class="contact-buttons">                       
-                        <a href="https://wa.me/50238660653" class="contact-button whatsapp" target="_blank">
-                            <i class="fab fa-whatsapp"></i>   WhatsApp
-                        </a>
-                    
-                        <a href="tel:+50242153288" class="contact-button call">
-                            <i class="fas fa-phone"></i>   Llamar
-                        </a>
-                        
-                        <a href="mailto:info@sagastumes.net" class="contact-button email">
-                            <i class="fas fa-envelope"></i>   Email
+                    <div class="contact-buttons">
+                        <a href="tel:+50238660653" class="btn-primary">Llamar Ahora</a>
+                        <a href="mailto:info@sagastumes.net" class="btn-secondary">Enviar Email</a>
+                        <a href="https://wa.me/50238660653" class="whatsapp-help-button" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            Contactar por WhatsApp
                         </a>
                     </div>
-                    
-                    
                 </div>
             </div>
         </section>
