@@ -1,7 +1,3 @@
-html {
-    scroll-behavior: smooth;
-}
-
 /* Base styles */
 :root {
     --primary: #1a365d;
@@ -23,14 +19,6 @@ body {
 }
 
 /* Header styles */
-.bg-white {
-    background-color: white;
-}
-
-.shadow-md {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
 .nav {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -49,6 +37,16 @@ body {
 .nav-logo {
     height: 48px;
     width: auto;
+}
+
+.mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary);
+    cursor: pointer;
+    padding: 0.5rem;
 }
 
 .nav-menu {
@@ -71,19 +69,124 @@ body {
     background-color: #f3f4f6;
 }
 
-.nav-links a {
-    color: #374151;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    transition: all 0.3s ease;
+/* Contact section */
+.contact-section {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #f8fafc;
 }
 
-.nav-links a:hover {
+.contact-section h2 {
+    font-size: 2rem;
     color: var(--primary);
-    background-color: #f3f4f6;
-    transform: translateY(-1px);
+    margin-bottom: 1rem;
+}
+
+.contact-section p {
+    color: #4b5563;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 300px;
+    width: 100%;
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button.whatsapp {
+    background-color: #25D366;
+}
+
+.contact-button.whatsapp:hover {
+    background-color: #1DA851;
+}
+
+.contact-button.call {
+    background-color: #007bff;
+}
+
+.contact-button.call:hover {
+    background-color: #0056b3;
+}
+
+.contact-button.email {
+    background-color: #f97316;
+}
+
+.contact-button.email:hover {
+    background-color: #ea580c;
+}
+
+/* Services section */
+.services {
+    padding: 4rem 0;
+    background-color: #f9fafb;
+}
+
+.services h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.service-card {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.service-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.service-description {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 /* Hero section */
@@ -167,6 +270,58 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .nav-content {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-logo {
+        height: 40px;
+    }
+
+    .service-card {
+        margin: 0 1rem;
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .contact-buttons {
+        padding: 0 1rem;
+    }
+}
+
 .hero p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
@@ -236,7 +391,7 @@ body {
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -252,7 +407,6 @@ body {
     transition: all 0.4s ease;
     transform: translateY(0);
     opacity: 1;
-    animation: fadeInUp 0.6s ease forwards;
     cursor: pointer;
     text-decoration: none;
 }
@@ -280,6 +434,7 @@ body {
     z-index: 2;
     transition: opacity 0.3s ease;
     opacity: 1;
+    visibility: visible;
 }
 
 .service-card .service-details {
@@ -296,15 +451,24 @@ body {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 0.5rem;
+<<<<<<< HEAD
+    pointer-events: none;
+=======
+>>>>>>> 3e91eff0116e547e5a9ac5b390f5f21da6c4412a
 }
 
 .service-card:hover .service-details {
     transform: translateY(-50%);
     opacity: 1;
+<<<<<<< HEAD
+    pointer-events: auto;
+=======
+>>>>>>> 3e91eff0116e547e5a9ac5b390f5f21da6c4412a
 }
 
 .service-card:hover .service-content {
     opacity: 0;
+    visibility: hidden;
 }
 
 .service-card:hover {
@@ -315,9 +479,17 @@ body {
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: bounce 2s infinite;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--primary);
+    animation: pulseIcon 2s ease-in-out infinite;
+}
+
+@keyframes pulseIcon {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 .service-card h3 {
@@ -600,7 +772,8 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.1);
+    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.2);
+}, 54, 93, 0.1);
 }
 
 .modal h2 {
@@ -800,7 +973,7 @@ body {
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -816,7 +989,6 @@ body {
     transition: all 0.4s ease;
     transform: translateY(0);
     opacity: 1;
-    animation: fadeInUp 0.6s ease forwards;
     cursor: pointer;
     text-decoration: none;
 }
@@ -844,6 +1016,7 @@ body {
     z-index: 2;
     transition: opacity 0.3s ease;
     opacity: 1;
+    visibility: visible;
 }
 
 .service-card .service-details {
@@ -860,15 +1033,24 @@ body {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 0.5rem;
+<<<<<<< HEAD
+    pointer-events: none;
+=======
+>>>>>>> 3e91eff0116e547e5a9ac5b390f5f21da6c4412a
 }
 
 .service-card:hover .service-details {
     transform: translateY(-50%);
     opacity: 1;
+<<<<<<< HEAD
+    pointer-events: auto;
+=======
+>>>>>>> 3e91eff0116e547e5a9ac5b390f5f21da6c4412a
 }
 
 .service-card:hover .service-content {
     opacity: 0;
+    visibility: hidden;
 }
 
 .service-card:hover {
@@ -879,9 +1061,17 @@ body {
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: bounce 2s infinite;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--primary);
+    animation: pulseIcon 2s ease-in-out infinite;
+}
+
+@keyframes pulseIcon {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 .service-card h3 {
@@ -1164,7 +1354,8 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.1);
+    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.2);
+}, 54, 93, 0.1);
 }
 
 .modal h2 {
@@ -1364,7 +1555,7 @@ body {
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -1380,7 +1571,6 @@ body {
     transition: all 0.4s ease;
     transform: translateY(0);
     opacity: 1;
-    animation: fadeInUp 0.6s ease forwards;
     cursor: pointer;
     text-decoration: none;
 }
@@ -1408,6 +1598,7 @@ body {
     z-index: 2;
     transition: opacity 0.3s ease;
     opacity: 1;
+    visibility: visible;
 }
 
 .service-card .service-details {
@@ -1424,15 +1615,24 @@ body {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 0.5rem;
+<<<<<<< HEAD
+    pointer-events: none;
+=======
+>>>>>>> 3e91eff0116e547e5a9ac5b390f5f21da6c4412a
 }
 
 .service-card:hover .service-details {
     transform: translateY(-50%);
     opacity: 1;
+<<<<<<< HEAD
+    pointer-events: auto;
+=======
+>>>>>>> 3e91eff0116e547e5a9ac5b390f5f21da6c4412a
 }
 
 .service-card:hover .service-content {
     opacity: 0;
+    visibility: hidden;
 }
 
 .service-card:hover {
@@ -1443,9 +1643,17 @@ body {
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: bounce 2s infinite;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--primary);
+    animation: pulseIcon 2s ease-in-out infinite;
+}
+
+@keyframes pulseIcon {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 .service-card h3 {
@@ -1728,7 +1936,8 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.1);
+    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.2);
+}, 54, 93, 0.1);
 }
 
 .modal h2 {
@@ -1928,7 +2137,7 @@ body {
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -1944,7 +2153,6 @@ body {
     transition: all 0.4s ease;
     transform: translateY(0);
     opacity: 1;
-    animation: fadeInUp 0.6s ease forwards;
     cursor: pointer;
     text-decoration: none;
 }
@@ -1972,6 +2180,7 @@ body {
     z-index: 2;
     transition: opacity 0.3s ease;
     opacity: 1;
+    visibility: visible;
 }
 
 .service-card .service-details {
@@ -1988,15 +2197,24 @@ body {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 0.5rem;
+<<<<<<< HEAD
+    pointer-events: none;
+=======
+>>>>>>> 3e91eff0116e547e5a9ac5b390f5f21da6c4412a
 }
 
 .service-card:hover .service-details {
     transform: translateY(-50%);
     opacity: 1;
+<<<<<<< HEAD
+    pointer-events: auto;
+=======
+>>>>>>> 3e91eff0116e547e5a9ac5b390f5f21da6c4412a
 }
 
 .service-card:hover .service-content {
     opacity: 0;
+    visibility: hidden;
 }
 
 .service-card:hover {
@@ -2007,9 +2225,17 @@ body {
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: bounce 2s infinite;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--primary);
+    animation: pulseIcon 2s ease-in-out infinite;
+}
+
+@keyframes pulseIcon {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 .service-card h3 {
@@ -2292,7 +2518,8 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.1);
+    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.2);
+}, 54, 93, 0.1);
 }
 
 .modal h2 {
@@ -2492,7 +2719,7 @@ body {
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -2508,7 +2735,6 @@ body {
     transition: all 0.4s ease;
     transform: translateY(0);
     opacity: 1;
-    animation: fadeInUp 0.6s ease forwards;
     cursor: pointer;
     text-decoration: none;
 }
@@ -2536,6 +2762,7 @@ body {
     z-index: 2;
     transition: opacity 0.3s ease;
     opacity: 1;
+    visibility: visible;
 }
 
 .service-card .service-details {
@@ -2552,15 +2779,24 @@ body {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 0.5rem;
+<<<<<<< HEAD
+    pointer-events: none;
+=======
+>>>>>>> 3e91eff0116e547e5a9ac5b390f5f21da6c4412a
 }
 
 .service-card:hover .service-details {
     transform: translateY(-50%);
     opacity: 1;
+<<<<<<< HEAD
+    pointer-events: auto;
+=======
+>>>>>>> 3e91eff0116e547e5a9ac5b390f5f21da6c4412a
 }
 
 .service-card:hover .service-content {
     opacity: 0;
+    visibility: hidden;
 }
 
 .service-card:hover {
@@ -2571,9 +2807,17 @@ body {
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: bounce 2s infinite;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--primary);
+    animation: pulseIcon 2s ease-in-out infinite;
+}
+
+@keyframes pulseIcon {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 .service-card h3 {
@@ -2856,7 +3100,8 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.1);
+    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.2);
+}, 54, 93, 0.1);
 }
 
 .modal h2 {
@@ -3056,7 +3301,7 @@ body {
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -3072,7 +3317,6 @@ body {
     transition: all 0.4s ease;
     transform: translateY(0);
     opacity: 1;
-    animation: fadeInUp 0.6s ease forwards;
     cursor: pointer;
     text-decoration: none;
 }
@@ -3100,6 +3344,7 @@ body {
     z-index: 2;
     transition: opacity 0.3s ease;
     opacity: 1;
+    visibility: visible;
 }
 
 .service-card .service-details {
@@ -3116,15 +3361,24 @@ body {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 0.5rem;
+<<<<<<< HEAD
+    pointer-events: none;
+=======
+>>>>>>> 3e91eff0116e547e5a9ac5b390f5f21da6c4412a
 }
 
 .service-card:hover .service-details {
     transform: translateY(-50%);
     opacity: 1;
+<<<<<<< HEAD
+    pointer-events: auto;
+=======
+>>>>>>> 3e91eff0116e547e5a9ac5b390f5f21da6c4412a
 }
 
 .service-card:hover .service-content {
     opacity: 0;
+    visibility: hidden;
 }
 
 .service-card:hover {
@@ -3135,9 +3389,17 @@ body {
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: bounce 2s infinite;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--primary);
+    animation: pulseIcon 2s ease-in-out infinite;
+}
+
+@keyframes pulseIcon {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 .service-card h3 {
@@ -3420,7 +3682,8 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.1);
+    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.2);
+}, 54, 93, 0.1);
 }
 
 .modal h2 {
@@ -3620,7 +3883,7 @@ body {
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -3636,7 +3899,6 @@ body {
     transition: all 0.4s ease;
     transform: translateY(0);
     opacity: 1;
-    animation: fadeInUp 0.6s ease forwards;
     cursor: pointer;
     text-decoration: none;
 }
@@ -3664,6 +3926,7 @@ body {
     z-index: 2;
     transition: opacity 0.3s ease;
     opacity: 1;
+    visibility: visible;
 }
 
 .service-card .service-details {
@@ -3680,15 +3943,24 @@ body {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 0.5rem;
+<<<<<<< HEAD
+    pointer-events: none;
+=======
+>>>>>>> 3e91eff0116e547e5a9ac5b390f5f21da6c4412a
 }
 
 .service-card:hover .service-details {
     transform: translateY(-50%);
     opacity: 1;
+<<<<<<< HEAD
+    pointer-events: auto;
+=======
+>>>>>>> 3e91eff0116e547e5a9ac5b390f5f21da6c4412a
 }
 
 .service-card:hover .service-content {
     opacity: 0;
+    visibility: hidden;
 }
 
 .service-card:hover {
@@ -3699,9 +3971,17 @@ body {
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    animation: bounce 2s infinite;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--primary);
+    animation: pulseIcon 2s ease-in-out infinite;
+}
+
+@keyframes pulseIcon {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 .service-card h3 {
@@ -3984,4 +4264,5 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(26
+    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.2);
+}
