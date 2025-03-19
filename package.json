@@ -2,6 +2,7 @@
   "name": "sagastumes-net",
   "version": "0.1.0",
   "private": true,
+  "description": "Sitio web de Sagastumes",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -17,15 +18,14 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "fs": "^0.0.1-security",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^7.6.3",
     "multer": "^1.4.5-lts.1",
-    "next": "^14.0.4",
+    "next": "^15.2.3",
     "pdfkit": "^0.14.0",
     "postcss": "^8.4.32",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "tailwindcss": "^3.3.6",
     "tesseract.js": "^5.0.3",
     "typescript": "^5.3.3"
@@ -36,24 +36,6 @@
     "@types/react-dom": "^18.2.17",
     "eslint": "^8.55.0",
     "eslint-config-next": "14.0.4"
-  }
-}
-{
-  "name": "sagastumes-website",
-  "version": "1.0.0",
-  "description": "Sitio web de Sagastumes",
-  "scripts": {
-    "build": "echo 'No build step required'"
-  },
-  "author": "",
-  "license": "ISC"
-}
-{
-  "name": "sagastumes-website",
-  "version": "1.0.0",
-  "description": "Sitio web de Sagastumes",
-  "scripts": {
-    "build": "echo 'No build step required'"
   },
   "author": "",
   "license": "ISC"

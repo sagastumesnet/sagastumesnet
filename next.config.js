@@ -2,20 +2,27 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  // Change output to export for static site generation
+  // Static export for Cloudflare Pages
   output: 'export',
-  // Disable image optimization since Cloudflare Pages doesn't support it
+  // Disable image optimization for static export
   images: {
     unoptimized: true,
+    domains: ['sagastumes.net'],
   },
-  // Add trailing slash for better compatibility
+  // Better URL compatibility
   trailingSlash: true,
-  // Disable source maps in production
+  // Reduce bundle size
   productionBrowserSourceMaps: false,
-  // Ensure Next.js knows it's being deployed to Cloudflare Pages
-  env: {
-    NEXT_PUBLIC_CLOUDFLARE_PAGES: 'true',
-  }
+  // Handle Node.js modules in browser
+  webpack: (config) => {
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      path: false,
+      os: false,
+    };
+    return config;
+  },
 }
 
 module.exports = nextConfig
