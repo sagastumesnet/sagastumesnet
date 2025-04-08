@@ -672,24 +672,90 @@ a:hover {
     color: var(--accent);
 }
 
-.social-links {
+/* Enhanced Social Media Icons - Improved Centering */
+.social-icons {
     display: flex;
     gap: 15px;
+    margin-top: 15px;
 }
 
-.social-links a {
+.social-icons a {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    color: var(--white);
-    transition: var(--transition);
+    color: #000000;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.social-links a:hover {
+.social-icons a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Brand-specific colors */
+.social-icon.facebook {
+    background: #4267B2;
+}
+
+.social-icon.messenger {
+    background: #0099FF;
+}
+
+.social-icon.whatsapp {
+    background: #25D366;
+}
+
+.social-icon.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-icon.tiktok {
+    background: #000000;
+}
+
+.social-icon.tiktok:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #25F4EE, #FE2C55);
+    mix-blend-mode: screen;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+/* Animation for icons */
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+.social-icons a:hover i {
+    animation: pulse-glow 1.5s infinite;
+}
+
+.contact-button:hover {
     background-color: var(--primary);
     transform: translateY(-3px);
 }
