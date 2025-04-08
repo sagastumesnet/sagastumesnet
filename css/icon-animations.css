@@ -1,0 +1,204 @@
+/* Icon Animations */
+.service-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.service-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.service-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.service-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background-color: #f0f7ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #4e8cff;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+/* Base animation for all icons */
+.animated-icon i {
+    transition: all 0.5s ease;
+}
+
+/* Hover animations for icons */
+.service-card:hover .animated-icon i {
+    animation: iconAnimation 1s infinite alternate;
+}
+
+/* Different animations for different icons */
+.service-card:nth-child(1):hover .animated-icon i {
+    animation: pulse 1.5s infinite;
+}
+
+.service-card:nth-child(2):hover .animated-icon i {
+    animation: bounce 1.5s infinite;
+}
+
+.service-card:nth-child(3):hover .animated-icon i {
+    animation: swing 1.5s infinite;
+}
+
+/* Animation keyframes */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-7px);
+    }
+}
+
+@keyframes swing {
+    20% {
+        transform: rotate(15deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+    }
+    60% {
+        transform: rotate(5deg);
+    }
+    80% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes iconAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Service grid layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card h3 {
+    margin: 15px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Contact buttons animation */
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    margin: 10px 5px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.contact-button:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.contact-button:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.contact-button:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.contact-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+.phone {
+    background-color: #4e8cff;
+}
+
+.email {
+    background-color: #EA4335;
+}

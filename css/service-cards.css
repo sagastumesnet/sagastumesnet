@@ -1,0 +1,125 @@
+/* Service Cards Styling */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 12px; /* rounded-xl */
+    padding: 24px; /* p-6 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    height: 100%;
+}
+
+.service-card:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* hover:shadow-lg */
+    transform: translateY(-5px);
+}
+
+.emoji-icon {
+    font-size: 2.5rem;
+    display: inline-block;
+    line-height: 1;
+}
+
+.service-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: 700; /* font-bold */
+    color: #333;
+}
+
+.service-card p {
+    color: #6b7280; /* text-gray-500 */
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.service-link {
+    display: inline-block;
+    color: #22c55e;
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: auto;
+    transition: all 0.3s ease;
+}
+
+.service-link:hover {
+    color: #16a34a;
+}
+
+.service-link i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.service-link:hover i {
+    transform: translateX(3px);
+}
+
+/* Section title styling */
+.section-title {
+    color: #22c55e !important; /* Green color for titles */
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
