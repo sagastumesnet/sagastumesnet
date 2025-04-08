@@ -55,7 +55,7 @@
 
 .service-link {
     display: inline-block;
-    color: #22c55e;
+    color: #1e40af; /* Changed to blue */
     font-weight: 500;
     text-decoration: none;
     margin-top: auto;
@@ -63,7 +63,7 @@
 }
 
 .service-link:hover {
-    color: #16a34a;
+    color: #1e3a8a; /* Darker blue on hover */
 }
 
 .service-link i {
@@ -75,14 +75,17 @@
     transform: translateX(3px);
 }
 
-/* Section title styling */
-.section-title {
-    color: #22c55e !important; /* Green color for titles */
+/* Featured title styling with yellow decorative line */
+.featured-title {
+    color: #1e40af !important; /* Blue color for titles */
     position: relative;
     padding-bottom: 15px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-.section-title::after {
+.featured-title::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -90,7 +93,7 @@
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, #22c55e, #16a34a);
+    background: #fbbf24; /* Yellow decorative line */
 }
 
 /* Responsive adjustments */
@@ -106,9 +109,49 @@
     }
 }
 
+/* Updated mobile responsive design */
 @media (max-width: 576px) {
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .service-card {
+        padding: 15px;
+    }
+    
+    .emoji-icon {
+        font-size: 2rem;
+    }
+    
+    .service-card h3 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    
+    .service-card p {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .service-link {
+        font-size: 13px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .service-card {
+        padding: 10px;
+    }
+    
+    .emoji-icon {
+        font-size: 1.8rem;
     }
 }
 
@@ -121,5 +164,18 @@
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fix for mobile scrolling issues */
+@media (max-width: 768px) {
+    .service-link {
+        padding: 8px 0;
+        display: inline-block;
     }
 }

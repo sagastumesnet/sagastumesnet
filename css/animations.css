@@ -100,3 +100,28 @@ a, button, .service-icon, .feature-card, .step-item, .contact-button {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
     }
 }
+
+
+/* Logo Animation */
+.logo-animation {
+    transition: transform 0.5s ease;
+    animation: logoEntrance 1.2s ease-out;
+}
+
+.logo-animation:hover {
+    transform: scale(1.05);
+}
+
+@keyframes logoEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
