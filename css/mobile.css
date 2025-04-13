@@ -1,0 +1,130 @@
+/* Mobile Optimizations */
+
+/* Why Choose Us Section - Mobile Centered */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        justify-items: center;
+        text-align: center;
+    }
+    
+    .feature-card {
+        padding: 15px 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-card h3 {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+    
+    .feature-card p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+    
+    .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+}
+
+/* DPI Guide Section - Horizontal Scroll for Mobile */
+@media (max-width: 768px) {
+    .steps-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 15px;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .step-item {
+        flex: 0 0 25%;
+        min-width: 25%;
+        scroll-snap-align: start;
+        padding: 15px 10px;
+    }
+    
+    .step-item h3 {
+        font-size: 0.9rem;
+    }
+    
+    .step-item p {
+        font-size: 0.8rem;
+    }
+    
+    .emoji-icon {
+        font-size: 1.8rem;
+    }
+    
+    /* Hide scrollbar but keep functionality */
+    .steps-container::-webkit-scrollbar {
+        height: 4px;
+    }
+    
+    .steps-container::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+    }
+}
+
+/* Footer - Optimized for Mobile */
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-top {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+    
+    .footer-column h3 {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+    
+    .footer-column p {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+    }
+    
+    .social-icons {
+        gap: 10px;
+    }
+    
+    .social-icons a {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    
+    .footer-middle {
+        margin: 20px 0;
+    }
+    
+    .footer-links {
+        gap: 15px;
+    }
+    
+    .footer-links a {
+        font-size: 0.8rem;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+}
