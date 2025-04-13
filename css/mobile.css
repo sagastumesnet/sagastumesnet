@@ -34,22 +34,58 @@
 }
 
 /* DPI Guide Section - Horizontal Scroll for Mobile */
+/* Updated DPI Guide Section for 6 steps */
 @media (max-width: 768px) {
     .steps-container {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        gap: 15px;
-        padding-bottom: 15px;
-        margin-bottom: 30px;
+        gap: 12px;
+        padding: 10px 5px 20px;
+        margin-bottom: 20px;
     }
     
     .step-item {
-        flex: 0 0 25%;
-        min-width: 25%;
-        scroll-snap-align: start;
-        padding: 15px 10px;
+        flex: 0 0 80%;
+        min-width: 80%;
+        scroll-snap-align: center;
+        padding: 20px 15px;
+        border-radius: 10px;
+        border-left: 4px solid var(--accent);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
     }
+    
+    /* Improved step dots for 6 items */
+    .step-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin: 15px 0;
+    }
+    
+    .step-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #ccc;
+        transition: all 0.3s ease;
+    }
+    
+    .step-dot.active {
+        background-color: var(--accent);
+        transform: scale(1.3);
+    }
+}
+
+/* For larger screens, adjust the grid to show 3 steps per row */
+@media (min-width: 769px) {
+    .steps-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
     
     .step-item h3 {
         font-size: 0.9rem;
